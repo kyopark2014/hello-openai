@@ -105,6 +105,9 @@ print(response.output_text)
 python basic.py
 ```
 
+이때의 결과는 아래와 같습니다.
+
+<img width="790" height="552" alt="image" src="https://github.com/user-attachments/assets/2bfba1db-e645-41cd-8cbc-1450542d3708" />
 
 
 
