@@ -11,17 +11,14 @@
 - 특정 AWS 리전에 배포해야 하는 규정 준수 요건이 있을 때
 
 
-### OpenAI Agents SDK
+### Hello World
 
-[OpenAI Agents SDK - Python](https://github.com/openai/openai-agents-python)을 활용합니다.
-
-아래와 같이 Openai SDK를 설치합니다.
+필요한 패키지를 설치합니다.
 
 ```bash
 pip install -U "openai>=2.40.0"
 ```
 
-### Hello World
 
 아래와 같이 Bedrock Key를 등록합니다.
 
