@@ -44,7 +44,7 @@ print(response.output_text)
 이때의 배포 모델은 `openai.gpt-5.5` (us-east-2 리전)이고, API URL은 `https://bedrock-mantle.us-east-2.api.aws/openai/v1`입니다.
 
 
-### AWS Credential 활용하기
+### AWS Credential
 
 `aws-bedrock-token-generator` 패키지를 설치하면 토큰 자동 갱신이 가능합니다.
 
