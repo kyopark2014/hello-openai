@@ -55,8 +55,8 @@ pip install aws-bedrock-token-generator
 이후 [basic.py](./basic.py)를 실행하면 AWS Credential을 이용해 인증하고 결과를 streaming으로 전달합니다.
 
 ```python
-from aws_bedrock_token_generator import provide_token
 from openai import BedrockOpenAI
+from aws_bedrock_token_generator import provide_token
 
 AWS_REGION = "us-east-2"
 
@@ -65,12 +65,17 @@ client = BedrockOpenAI(
     bedrock_token_provider=lambda: provide_token(region=AWS_REGION),
 )
 
-response = client.responses.create(
+stream = client.responses.create(
     model="openai.gpt-5.5",
-    input="Write a haiku about cloud infrastructure.",
+    input="Amazon S3에 파일을 업로드하는 방법을 설명해주세요.",
+    stream=True,
 )
 
-print(response.output_text)
+for event in stream:
+    if event.type == "response.output_text.delta":
+        print(event.delta, end="", flush=True)
+
+print()
 ```
 
 ### 기능 지원 현황 (2026년 6월 1일 기준)
