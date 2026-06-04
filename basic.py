@@ -10,7 +10,7 @@ client = BedrockOpenAI(
 
 stream = client.responses.create(
     model="openai.gpt-5.5",
-    input="AWS에서 OpenAI API를 사용하는 방법을 설명해주세요.",
+    input="Amazon S3에 파일을 업로드하는 방법을 설명해주세요.",
     stream=True,
 )
 
